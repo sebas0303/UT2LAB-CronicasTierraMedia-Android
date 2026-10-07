@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CronicasTierraMedia</string>
+    <string-array name="razas">
+        <item>Hobbit</item>
+        <item>Elfo</item>
+        <item>Enano</item>
+        <item>Humano</item>
+    </string-array>
 </resources>

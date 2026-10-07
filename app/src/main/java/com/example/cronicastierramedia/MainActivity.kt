@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
     private var contador = 0
@@ -28,6 +29,15 @@ class MainActivity : AppCompatActivity() {
             tvSaludo.text = "¡La Comunidad del Anillo ha partido hacia Mordor!"
             tvContador.text = "Miembros reunidos: $contador"
         }
+
+
+        //ayuda de IA para pasar añadir otra vista
+        val btnForja = findViewById<Button>(R.id.btnForja)
+
+        btnForja.setOnClickListener {
+            startActivity(Intent(this, CreadorPersonajeActivity::class.java))
+        }
+        //
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
