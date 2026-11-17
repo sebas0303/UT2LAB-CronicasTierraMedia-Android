@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del guerrero"
+            android:inputType="textPersonName">
+
+            <requestFocus />
+        </EditText>
+
+        <Spinner
+            android:id="@+id/spRaza"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:entries="@array/razas"/>
+
+        <RadioGroup
+            android:id="@+id/rgFaccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checkedButton="@+id/rbComunidad">
+
+            <RadioButton
+                android:id="@+id/rbComunidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comunidad del Anillo" />
+
+            <RadioButton
+                android:id="@+id/rbMordor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Huestes de Mordor" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cbSigilo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Sigilo" />
+
+        <CheckBox
+            android:id="@+id/cbEspada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Combate con Espada" />
+
+        <ImageButton
+            android:id="@+id/btnRegistro"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:contentDescription="Registrar personaje"
+            android:src="@drawable/baseline_shield_24" />
+    </LinearLayout>
+</ScrollView>
